@@ -1,0 +1,22 @@
+//time_series.proto
+syntax = "proto3";
+package time_series;
+
+// The request method. No variable is needed, since it will just give all data in the server.
+message TimeSeriesRequest {
+}
+
+// The response data
+message TimeSeriesReply {
+  message DataPoint {
+    string time = 1;
+    float meterusage = 2;
+  }
+  repeated DataPoint data_points = 1;
+}
+
+// The TimeSeries service definition
+service  TimeSeries {
+  // TimeSeries back reply
+  rpc Reply (TimeSeriesRequest) returns (TimeSeriesReply) {}
+}
