@@ -21,4 +21,9 @@ At the moment, it is not possible to specify the gRPC port since the html templa
 # How to start the gRPC process
 Make sure you have set up the gRPC server properly (https://github.com/jvbustelo/time_series_grpc_server).
 
-Once the Flask app is running, navigate with your browser to http://localhost:5000/. When clicking in the link, the process will start and you will eventually see in the screen the raw JSON.
+Once the Flask app is running, navigate with your browser to http://localhost:5000/. 
+
+Click in the link and the entire process will start (HTTP GET call to the client, the client making the gRPC request
+ to the gRPC server, receiving the reply and finally formatting it as a JSON).
+ 
+ You will eventually see in the browser the raw JSON!
